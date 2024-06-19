@@ -1,5 +1,280 @@
 @import url(./reset.css);
+@import url(./variables.css);
 
-h1 {
-  color: green;
+* {
+  font-family: var(--font-family);
+}
+
+.mainWrapper {
+  max-width: 1920px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 36px 40px;
+}
+
+.registrationSection {
+  width: 100%;
+  padding-left: 72px;
+  background: #ebf0fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registrationSection-info {
+  width: 511px;
+  /* margin: 105px 0; */
+  margin-right: 20px;
+}
+
+.mainTitle {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 160%;
+  color: #1f4284;
+}
+
+.article {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 160%;
+  color: #727272;
+  margin: 18px 0 36px 0;
+}
+
+.openRegistrationFormButton {
+  border-radius: 60px;
+  padding: 12px 12px 12px 24px;
+  width: 341px;
+  height: 68px;
+  background: #244c98;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #ffffff;
+  padding: 0 12px 0 24px;
+}
+
+.openRegistrationFormButton .iconBlock {
+  border-radius: 40px;
+  padding: 4px;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: var(--transitionTime);
+  transition: var(--transitionTime);
+}
+
+.openRegistrationFormButton:hover .iconBlock {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: var(--transitionTime);
+  transition: var(--transitionTime);
+}
+
+.registrationSection-image {
+  max-width: 60%;
+  content: url("../../assets/computer-1920.jpg");
+}
+
+.formWrapper {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.formWrapper.active {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.registrationForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f0f4fc;
+  padding: 24px;
+  width: 500px;
+}
+
+.registrationForm .closeButton {
+  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  background: #ffffff;
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.formWrapper .closeButton::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  border-radius: 1px;
+  width: 17px;
+  background-color: #000;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  -webkit-transition: var(--transitionTime);
+  transition: var(--transitionTime);
+}
+
+.formWrapper .closeButton::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 17px;
+  border-radius: 1px;
+  background-color: #000;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  left: 50%;
+  top: 50%;
+  -webkit-transition: var(--transitionTime);
+  transition: var(--transitionTime);
+}
+
+.registrationForm .closeButton:hover::before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(1.2);
+          transform: translate(-50%, -50%) rotate(-45deg) scale(1.2);
+  -webkit-transition: var(--transitionTime);
+  transition: var(--transitionTime);
+}
+
+.registrationForm .closeButton:hover::after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+          transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+  -webkit-transition: var(--transitionTime);
+  transition: var(--transitionTime);
+}
+
+.registrationForm .subTitle {
+  font-weight: 500;
+  font-size: 24px;
+  color: #323232;
+  margin: 4px 0 18px 0;
+}
+
+.input.email,
+.input.password {
+  border-radius: 10px;
+  width: 100%;
+  height: 73px;
+  padding: 0 24px;
+  background: #d7e2f6;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1f4284;
+}
+
+.input.email {
+  margin-bottom: 4px;
+}
+
+label.rememberMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: #323232;
+  margin: 24px 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.button.recoverPassword {
+  font-weight: 500;
+  font-size: 20px;
+  color: #244c98;
+  width: 136px;
+}
+
+.button.recoverPassword:hover {
+  text-decoration: underline;
+}
+
+.button.logIn,
+.button.regIn {
+  border-radius: 4px;
+  width: 100%;
+  height: 65px;
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid #244c98;
+  -webkit-transition: var(--transitionTime);
+  transition: var(--transitionTime);
+}
+
+.button.logIn:hover,
+.button.regIn:hover {
+  border-radius: 10px;
+  -webkit-transition: var(--transitionTime);
+  transition: var(--transitionTime);
+}
+
+.button.logIn {
+  background: #244c98;
+  color: #fff;
+  margin: 36px 0 4px 0;
+}
+
+.button.regIn {
+  color: #244c98;
 }

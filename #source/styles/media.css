@@ -1,7 +1,19 @@
 @media (max-width: 1440px) {
+  .registrationSection-image {
+    max-width: 60%;
+    content: url("../../assets/computer-1440.jpg");
+  }
 }
 
 @media (max-width: 768px) {
+  .registrationSection-image {
+    max-width: 60%;
+    content: url("../../assets/computer-768.jpg");
+  }
 }
 @media (max-width: 375px) {
+  .registrationSection-image {
+    max-width: 60%;
+    content: url("../../assets/computer-375.jpg");
+  }
 }

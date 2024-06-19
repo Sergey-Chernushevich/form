@@ -4,11 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/media.css" />
     <title>Form</title>
   </head>
   <body>
+    <div class="mainWrapper">
+      <section class="registrationSection">
+        <div class="registrationSection-info">
+          <h1 class="mainTitle">Демо-версия</h1>
+          <p class="article">
+            За 18 лет деятельности было реализовано более 500 крупных, а так же,
+            не менее 2500 средних и малых проектов. Используя знания и
+            накопленный опыт мы можем предложить
+          </p>
+          <button
+            id="openRegistrationFormButton"
+            class="openRegistrationFormButton"
+          >
+            <p>Попробовать бесплатно</p>
+            <div class="iconBlock">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 7H17V17"
+                  stroke="#1F4284"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7 17L17 7"
+                  stroke="#1F4284"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="registrationSection-image">
+          <!-- <img src="./assets/computer-1920.jpg" alt="computer" /> -->
+        </div>
+      </section>
+      <div class="formWrapper active">
+        <form action="submit" class="registrationForm">
+          <button class="closeButton"></button>
+          <h2 class="subTitle">Войти в систему</h2>
+          <input class="input email" type="text" placeholder="Email/Телефон" />
+          <input class="input password" type="password" placeholder="Пароль" />
+
+          <label class="rememberMe" for="rememberMe"
+            ><input class="input rememberMe" type="checkbox" id="rememberMe" />
+            Запомнить пароль</label
+          >
+          <button class="recoverPassword button">Восстановить</button>
+          <button id="logIn" class="logIn button">Войти</button>
+          <button id="regIn" class="regIn button">Зарегестрироваться</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/main.js"></script>
   </body>
 </html>
