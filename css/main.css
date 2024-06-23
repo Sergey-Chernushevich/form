@@ -13,14 +13,13 @@
 }
 
 .registrationSection {
-  width: 100%;
-  padding-left: 72px;
+  padding: 0 0 0 72px;
   background: #ebf0fa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -31,7 +30,6 @@
 
 .registrationSection-info {
   width: 511px;
-  /* margin: 105px 0; */
   margin-right: 20px;
 }
 
@@ -52,7 +50,6 @@
 
 .openRegistrationFormButton {
   border-radius: 60px;
-  padding: 12px 12px 12px 24px;
   width: 341px;
   height: 68px;
   background: #244c98;
@@ -67,13 +64,12 @@
           align-items: center;
   font-weight: 500;
   font-size: 18px;
-  line-height: 160%;
   color: #ffffff;
   padding: 0 12px 0 24px;
 }
 
 .openRegistrationFormButton .iconBlock {
-  border-radius: 40px;
+  border-radius: 50%;
   padding: 4px;
   width: 44px;
   height: 44px;
@@ -99,18 +95,25 @@
 }
 
 .registrationSection-image {
-  max-width: 60%;
-  content: url("../../assets/computer-1920.jpg");
+  width: 57%;
+  height: 465px;
+  border: 1px solid red;
+  position: relative;
+  overflow: hidden;
+}
+.registrationSection-image img {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 
 .formWrapper {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 .formWrapper.active {
-  opacity: 1;
-  visibility: visible;
   position: absolute;
   top: 0;
   left: 0;
@@ -141,7 +144,7 @@
   width: 500px;
 }
 
-.registrationForm .closeButton {
+.registrationForm .closeFormButton {
   border-radius: 10px;
   width: 52px;
   height: 52px;
@@ -151,7 +154,7 @@
       align-self: flex-end;
 }
 
-.formWrapper .closeButton::before {
+.formWrapper .closeFormButton::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -166,7 +169,7 @@
   transition: var(--transitionTime);
 }
 
-.formWrapper .closeButton::after {
+.formWrapper .closeFormButton::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -181,14 +184,14 @@
   transition: var(--transitionTime);
 }
 
-.registrationForm .closeButton:hover::before {
+.registrationForm .closeFormButton:hover::before {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(1.2);
           transform: translate(-50%, -50%) rotate(-45deg) scale(1.2);
   -webkit-transition: var(--transitionTime);
   transition: var(--transitionTime);
 }
 
-.registrationForm .closeButton:hover::after {
+.registrationForm .closeFormButton:hover::after {
   -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
           transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
   -webkit-transition: var(--transitionTime);

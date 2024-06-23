@@ -15,7 +15,7 @@
     <title>Form</title>
   </head>
   <body>
-    <div class="mainWrapper">
+    <div id="mainWrapper" class="mainWrapper">
       <section class="registrationSection">
         <div class="registrationSection-info">
           <h1 class="mainTitle">Демо-версия</h1>
@@ -56,15 +56,25 @@
           </button>
         </div>
         <div class="registrationSection-image">
-          <!-- <img src="./assets/computer-1920.jpg" alt="computer" /> -->
+          <img id="formImage" src="./assets/computer-1920.jpg" alt="computer" />
         </div>
       </section>
-      <div class="formWrapper active">
+      <div id="formWrapper" class="formWrapper">
         <form action="submit" class="registrationForm">
-          <button class="closeButton"></button>
+          <button id="closeFormButton" class="closeFormButton"></button>
           <h2 class="subTitle">Войти в систему</h2>
-          <input class="input email" type="text" placeholder="Email/Телефон" />
-          <input class="input password" type="password" placeholder="Пароль" />
+          <input
+            class="input email"
+            type="text"
+            placeholder="Email/Телефон"
+            suggested="username"
+          />
+          <input
+            class="input password"
+            type="password"
+            placeholder="Пароль"
+            autocomplete="current-password"
+          />
 
           <label class="rememberMe" for="rememberMe"
             ><input class="input rememberMe" type="checkbox" id="rememberMe" />
