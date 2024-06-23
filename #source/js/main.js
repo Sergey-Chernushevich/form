@@ -42,10 +42,10 @@ function updateImage() {
   if (window.innerWidth <= 375) {
     formImage.src = "./assets/computer-375.jpg";
   }
-  if (window.innerWidth <= 765 && window.innerWidth > 375) {
+  if (window.innerWidth <= 768 && window.innerWidth > 375) {
     formImage.src = "./assets/computer-768.jpg";
   }
-  if (window.innerWidth <= 1440 && window.innerWidth > 765) {
+  if (window.innerWidth <= 1440 && window.innerWidth > 768) {
     formImage.src = "./assets/computer-1440.jpg";
   } else {
     formImage.src = "./assets/computer-1920.jpg";

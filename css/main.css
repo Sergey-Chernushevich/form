@@ -10,10 +10,10 @@
   min-width: 375px;
   margin: 0 auto;
   padding: 36px 40px;
+  border: 1px solid black;
 }
 
 .registrationSection {
-  padding: 0 0 0 72px;
   background: #ebf0fa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,6 +29,7 @@
 }
 
 .registrationSection-info {
+  padding: 0 0 0 72px;
   width: 511px;
   margin-right: 20px;
 }
@@ -95,18 +96,21 @@
 }
 
 .registrationSection-image {
-  width: 57%;
+  max-width: 910px;
+  width: 60%;
   height: 465px;
   border: 1px solid red;
   position: relative;
   overflow: hidden;
 }
+
 .registrationSection-image img {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+  height: 465px;
 }
 
 .formWrapper {
