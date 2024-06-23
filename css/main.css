@@ -10,7 +10,6 @@
   min-width: 375px;
   margin: 0 auto;
   padding: 36px 40px;
-  border: 1px solid black;
 }
 
 .registrationSection {
@@ -26,6 +25,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 10px;
 }
 
 .registrationSection-info {
@@ -99,9 +99,9 @@
   max-width: 910px;
   width: 60%;
   height: 465px;
-  border: 1px solid red;
   position: relative;
   overflow: hidden;
+  border-radius: 0 10px 10px 0;
 }
 
 .registrationSection-image img {

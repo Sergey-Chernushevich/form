@@ -40,7 +40,7 @@
     width: 100%;
     height: auto;
     position: static;
-    border: 1px solid red;
+    border-radius: 0 0 10px 10px;
   }
 
   .registrationSection-image img {
@@ -53,15 +53,8 @@
 }
 
 @media (max-width: 768px) {
-  .registrationSection {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .mainWrapper {
+    padding: 24px;
   }
 
   .registrationSection-info {
@@ -94,7 +87,17 @@
   .registrationSection-image {
   }
 }
+
 @media (max-width: 375px) {
+  .mainWrapper {
+    padding: 24px 14px;
+  }
+
+  .registrationSection-info {
+    padding: 24px 24px 18px 24px;
+    margin-bottom: 0;
+  }
+
   .mainTitle {
     font-size: 17px;
   }
