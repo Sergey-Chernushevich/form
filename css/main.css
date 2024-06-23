@@ -3,6 +3,7 @@
 
 * {
   font-family: var(--font-family);
+  font-weight: 500;
 }
 
 .mainWrapper {
@@ -35,10 +36,9 @@
 }
 
 .mainTitle {
-  font-weight: 500;
   font-size: 30px;
   line-height: 160%;
-  color: #1f4284;
+  color: var(--privary-color);
 }
 
 .article {
@@ -63,7 +63,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 500;
   font-size: 18px;
   color: #ffffff;
   padding: 0 12px 0 24px;
@@ -164,7 +163,7 @@
   height: 2px;
   border-radius: 1px;
   width: 17px;
-  background-color: #000;
+  background-color: #000000;
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
   left: 50%;
@@ -179,7 +178,7 @@
   height: 2px;
   width: 17px;
   border-radius: 1px;
-  background-color: #000;
+  background-color: #000000;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
   left: 50%;
@@ -203,7 +202,6 @@
 }
 
 .registrationForm .subTitle {
-  font-weight: 500;
   font-size: 24px;
   color: #323232;
   margin: 4px 0 18px 0;
@@ -216,9 +214,8 @@
   height: 73px;
   padding: 0 24px;
   background: #d7e2f6;
-  font-weight: 500;
   font-size: 18px;
-  color: #1f4284;
+  color: var(--privary-color);
 }
 
 .input.email {
@@ -247,9 +244,8 @@ input[type="checkbox"] {
 }
 
 .button.recoverPassword {
-  font-weight: 500;
   font-size: 20px;
-  color: #244c98;
+  color: var(--privary-color);
   width: 136px;
 }
 
@@ -262,9 +258,8 @@ input[type="checkbox"] {
   border-radius: 4px;
   width: 100%;
   height: 65px;
-  font-weight: 500;
   font-size: 18px;
-  border: 1px solid #244c98;
+  border: 1px solid var(--privary-color);
   -webkit-transition: var(--transitionTime);
   transition: var(--transitionTime);
 }
@@ -277,11 +272,11 @@ input[type="checkbox"] {
 }
 
 .button.logIn {
-  background: #244c98;
+  background: var(--privary-color);
   color: #fff;
   margin: 36px 0 4px 0;
 }
 
 .button.regIn {
-  color: #244c98;
+  color: var(--privary-color);
 }

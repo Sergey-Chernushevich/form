@@ -6,8 +6,6 @@
   .registrationSection-image {
     max-width: 680px;
   }
-  .registrationSection-image img {
-  }
 }
 
 @media (max-width: 1200px) {
@@ -83,9 +81,6 @@
     width: 36px;
     height: 36px;
   }
-
-  .registrationSection-image {
-  }
 }
 
 @media (max-width: 375px) {
@@ -109,8 +104,5 @@
 
   .openRegistrationFormButton {
     width: 100%;
-  }
-
-  .registrationSection-image {
   }
 }

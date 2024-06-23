@@ -5,6 +5,8 @@ const openRegistrationFormButton = document.querySelector(
 );
 const closeFormButton = document.querySelector("#closeFormButton");
 
+// scripts for modal window
+
 function changeFormVisibility(e) {
   e.preventDefault();
   formWrapper.classList.toggle("active");
@@ -23,11 +25,15 @@ closeFormButton.addEventListener("click", (e) => {
   changeFormVisibility(e);
 });
 
+//close form by background click
+
 formWrapper.addEventListener("click", (e) => {
   if (e.target === formWrapper) {
     changeFormVisibility(e);
   }
 });
+
+//close form by escape button
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && formWrapper.classList.contains("active")) {
@@ -35,9 +41,10 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+//using different pictures depending on window width
+
 const formImage = document.getElementById("formImage");
 
-// Функция для обновления изображения в зависимости от ширины экрана
 function updateImage() {
   if (window.innerWidth <= 375) {
     formImage.src = "./assets/computer-375.jpg";
@@ -52,6 +59,5 @@ function updateImage() {
   }
 }
 
-// Вызываем функцию при загрузке страницы и при изменении размера окна
 updateImage();
 window.addEventListener("resize", updateImage);
