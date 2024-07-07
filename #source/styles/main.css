@@ -87,13 +87,21 @@
   left: 50%;
   top: 50%;
   height: 465px;
+  cursor: pointer;
 }
 
-.formWrapper {
+.modalWrapper {
   display: none;
+  position: relative;
 }
 
-.formWrapper.active {
+.modalWrapper .closeModalButton {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.modalWrapper.active {
   position: absolute;
   top: 0;
   left: 0;
@@ -105,24 +113,22 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.registrationForm {
-  display: flex;
-  flex-direction: column;
-  background: #f0f4fc;
-  padding: 24px;
-  width: 500px;
-}
-
-.registrationForm .closeFormButton {
+.closeModalButton {
   border-radius: 10px;
   width: 52px;
   height: 52px;
   background: #ffffff;
   position: relative;
-  align-self: flex-end;
 }
 
-.formWrapper .closeFormButton::before {
+.registrationForm .closeModalButton {
+  position: relative;
+  align-self: flex-end;
+  top: 0;
+  right: 0;
+}
+
+.closeModalButton::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -135,7 +141,7 @@
   transition: var(--transitionTime);
 }
 
-.formWrapper .closeFormButton::after {
+.closeModalButton::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -148,14 +154,23 @@
   transition: var(--transitionTime);
 }
 
-.registrationForm .closeFormButton:hover::before {
+.closeModalButton:hover::before {
   transform: translate(-50%, -50%) rotate(-45deg) scale(1.2);
   transition: var(--transitionTime);
 }
 
-.registrationForm .closeFormButton:hover::after {
+.closeModalButton:hover::after {
   transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
   transition: var(--transitionTime);
+}
+
+.registrationForm {
+  display: flex;
+  flex-direction: column;
+  width: 452px;
+  flex-shrink: 1;
+  background: #f0f4fc;
+  padding: 24px;
 }
 
 .registrationForm .subTitle {
@@ -230,4 +245,8 @@ input[type="checkbox"] {
 
 .button.regIn {
   color: var(--privary-color);
+}
+
+.modalImage {
+  width: 95%;
 }
