@@ -26,7 +26,8 @@
           </p>
           <button
             id="openRegistrationFormButton"
-            class="openRegistrationFormButton"
+            class="openRegistrationFormButton modal-button"
+            data-buttonType="openForm"
           >
             <p>Попробовать бесплатно</p>
             <div class="iconBlock">
@@ -56,35 +57,16 @@
           </button>
         </div>
         <div class="registrationSection-image">
-          <img id="formImage" src="./assets/computer-1920.jpg" alt="computer" />
+          <img
+            id="formImage"
+            data-buttonType="image"
+            class="modal-button"
+            src="./assets/computer-1920.jpg"
+            alt="computer"
+          />
         </div>
       </section>
-      <div id="formWrapper" class="formWrapper">
-        <form action="submit" onsubmit="return false;" class="registrationForm">
-          <button id="closeFormButton" class="closeFormButton"></button>
-          <h2 class="subTitle">Войти в систему</h2>
-          <input
-            class="input email"
-            type="text"
-            placeholder="Email/Телефон"
-            suggested="username"
-          />
-          <input
-            class="input password"
-            type="password"
-            placeholder="Пароль"
-            autocomplete="current-password"
-          />
-
-          <label class="rememberMe" for="rememberMe"
-            ><input class="input rememberMe" type="checkbox" id="rememberMe" />
-            Запомнить пароль</label
-          >
-          <button class="recoverPassword button">Восстановить</button>
-          <button id="logIn" class="logIn button">Войти</button>
-          <button id="regIn" class="regIn button">Зарегестрироваться</button>
-        </form>
-      </div>
+      <div id="modalWrapper" class="modalWrapper"></div>
     </div>
     <script src="./js/main.js"></script>
   </body>
